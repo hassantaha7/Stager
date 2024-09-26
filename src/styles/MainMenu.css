@@ -1,0 +1,78 @@
+/* src/styles/MainMenu.css */
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #001f3f; /* Navy background */
+    animation: slideIn 1s ease-out; /* Slide-in animation */
+  }
+  
+  .main-menu-logo {
+    max-width: 200px;
+    margin-bottom: 30px;
+    animation: bounceIn 1s ease-out; /* Bounce-in animation for the logo */
+  }
+  
+  .menu-buttons-container {
+    display: flex;
+    gap: 20px; /* Space between the buttons */
+  }
+  
+  .menu-button {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px; /* Slight rounding for a softer look */
+    background-color:  #2481b8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some depth */
+  }
+  
+  .menu-button:hover {
+    background-color:#2f6487;  /* Darken on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes buttonFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

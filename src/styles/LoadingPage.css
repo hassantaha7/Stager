@@ -1,0 +1,33 @@
+/* src/components/LoadingPage.css */
+.loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #001f3f; /* Navy background */
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  }
+  
+  .loading-logo {
+    max-width: 150px;
+    animation: pulse 1.5s infinite ease-in-out; /* Scaling pulse animation */
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

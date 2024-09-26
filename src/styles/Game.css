@@ -1,0 +1,92 @@
+/* src/styles/Game.css */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #001f3f, #0074d9); /* Navy blue gradient */
+  color: white;
+  padding: 20px;
+}
+
+.game-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.player {
+  position: relative;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.player-south {
+  background: rgba(0, 116, 217, 0.2);
+  border: 2px solid #0074d9;
+}
+
+.player-north {
+  background: rgba(255, 99, 71, 0.2);
+  border: 2px solid #ff6347;
+}
+
+.scoreboard {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1.2em;
+}
+
+.name{
+  margin-left: 20px;
+}
+
+.input {
+  padding: 10px;
+  border: 2px solid #0074d9;
+  border-radius: 5px;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.tick-button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+  border: none;
+  background-color: #2ecc40; /* Green tick button */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tick-button:hover {
+  background-color: #28a745;
+}
+
+.loading-logo {
+  width: 150px;
+  height: 150px;
+  animation: spin 5s linear infinite; /* Rotating logo animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
