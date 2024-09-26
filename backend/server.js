@@ -7,7 +7,9 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*', // Allow connections from any origin for testing
+    origin: '*', // Allow all origins
+    methods: ['GET', 'POST'],
+    credentials: true, // Allow credentials if needed
   },
 });
 
