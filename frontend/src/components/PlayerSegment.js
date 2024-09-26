@@ -42,8 +42,16 @@ const PlayerSegment = ({ onScore, currentQuestionIndex, yourTurn, onAnswered }) 
       setMessage("Wrong answer! Next player's turn.");
     }
     setAnswer('');
-    onAnswered(); // Notify that the turn is complete
+    
+    // Notify that the turn is complete
+    onAnswered();
+  
+    // Clear the message immediately after the answer is submitted
+    setTimeout(() => {
+      setMessage('');
+    }, 1000); // Adjust the delay time as needed (in milliseconds)
   };
+  
 
   return (
     currentPlayer && (

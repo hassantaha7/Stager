@@ -1,4 +1,13 @@
 /* src/styles/Game.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+
 .game-container {
   display: flex;
   flex-direction: column;
@@ -30,6 +39,7 @@
 .player-south {
   background: rgba(0, 116, 217, 0.2);
   border: 2px solid #0074d9;
+  margin-bottom: 50px;
 }
 
 .player-north {
