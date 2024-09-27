@@ -7,7 +7,10 @@ import PlayerSegment from './PlayerSegment';
 import Scoreboard from './Scoreboard';
 import '../styles/Game.css';
 
-const socket = io('https://stager-server.vercel.app/'); // Connect to the server
+const socket = io("https://stager-server.vercel.app", {
+  transports: ["websocket"], // Or specify polling if necessary
+});
+
 
 const Game = () => {
   const [stage, setStage] = useState('menu'); // Start with the main menu
