@@ -30,6 +30,7 @@ io.on('connection', (socket) => {
       // No waiting player, so this player waits for an opponent
       waitingPlayer = socket;
       socket.emit('waitingForOpponent'); // Inform the player that they are waiting
+      console.log(`Player ${socket.id} is waiting for an opponent.`);
     } else {
       // Match found: start the game
       const player1 = waitingPlayer;
@@ -42,6 +43,7 @@ io.on('connection', (socket) => {
       // Notify both players to start the game
       player1.emit('startGame', { yourTurn: true, opponentId: player2.id });
       player2.emit('startGame', { yourTurn: false, opponentId: player1.id });
+      console.log(`Game started between ${player1.id} and ${player2.id}`);
     }
   });
 
@@ -59,7 +61,6 @@ io.on('connection', (socket) => {
     // Broadcast the updated state to both players
     io.emit('updateGame', gameState);
   });
-
 
   // Handle player disconnection
   socket.on('disconnect', () => {
