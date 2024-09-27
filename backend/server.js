@@ -73,12 +73,7 @@ io.on('connection', (socket) => {
 });
 
 // Use the port provided by Vercel or default to 3001 for local development
-const PORT = process.env.PORT || 3001;
-
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+server.listen(() => {
+  console.log('Server is running...');
 });
 
-app.get('/', (req, res) => {
-  res.send('Server is running!');
-});
