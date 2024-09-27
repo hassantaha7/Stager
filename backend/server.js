@@ -7,9 +7,9 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*', // Allow all origins
-    methods: ['GET', 'POST'],
-    credentials: true, // Allow credentials if needed
+    origin: "https://stagerquiz.vercel.app/", // Replace with your frontend URL
+    methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
