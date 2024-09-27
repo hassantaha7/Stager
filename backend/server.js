@@ -6,7 +6,7 @@ const { Server } = require('socket.io');
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-  path: '/api', addTrailingSlash:false,  
+  path: '/socket.io', addTrailingSlash:false,  
   cors: {
     origin: "*", // Replace with your frontend URL
     methods: ["GET", "POST"],
