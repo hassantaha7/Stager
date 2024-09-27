@@ -8,7 +8,10 @@ import Scoreboard from './Scoreboard';
 import '../styles/Game.css';
 
 const socket = io("https://stager-server.vercel.app", {
-  transports: ["websocket"], // Or specify polling if necessary
+  transports: ["websocket", "polling"], // Attempt WebSocket first, fallback to polling
+  reconnectionAttempts: 5, // Number of reconnection attempts before failing
+  timeout: 5000, // Connection timeout duration
+  autoConnect: true, // Automatically attempt to reconnect
 });
 
 
